@@ -5,3 +5,10 @@ conda activate vllm_env
 # 安装 vLLM + FlashAttention
 pip install "vllm[all]"
 pip install flash-attn --no-build-isolation
+
+vLLM（https://github.com/vllm-project/vllm）是一个高性能大语言模型推理引擎，核心目标是极大提升大模型部署时的吞吐量和多并发能力，尤其适合服务端API场景。
+FlashAttention（https://github.com/Dao-AILab/flash-attention）是当前最主流的高性能**Transformer注意力加速库**。它对“注意力计算”部分进行了底层优化，提升了速度同时**大幅降低显存占用**。
+vLLM 内部集成/兼容 FlashAttention，二者配合能让大模型的推理速度和资源利用达到当前开源体系的“天花板”级别。
+
+#安装modelscope库(从该库下载模型)
+pip install modelscope
