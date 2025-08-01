@@ -1,1 +1,7 @@
+# 创建 conda 环境
+conda create -n vllm_env python=3.12 -y
+conda activate vllm_env
 
+# 安装 vLLM + FlashAttention
+pip install "vllm[all]"
+pip install flash-attn --no-build-isolation
