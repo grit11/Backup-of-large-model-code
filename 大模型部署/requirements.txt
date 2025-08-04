@@ -12,3 +12,10 @@ vLLM 内部集成/兼容 FlashAttention，二者配合能让大模型的推理�
 
 #安装modelscope库(从该库下载模型)
 pip install modelscope
+
+
+#千问2.5-VL-72B-Instruct模型运行环境
+72B (720亿参数) 巨型模型
+显存：》=160G，显卡：2xA100(160G显存) 4xL20（192G）需多卡并行启动
+数据盘：模型权重占用数据盘140G，预留300G以上空间存放图像、数据集、日志等
+镜像选择： 在AutoDL创建实例时，选择预装较新PyTorch、CUDA和基础Python环境的镜像（如PyTorch 2.0.1，CUDA 11.8或更高版本镜像）
